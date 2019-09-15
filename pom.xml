@@ -100,9 +100,30 @@
                 </execution>
             </executions>
         </plugin>
-  
-  
+  <plugin>
+  <artifactId>maven-war-plugin</artifactId>
+  <configuration>
+  <failOnMissingWebXml>
+  false
+  </failOnMissingWebXml>
+  <!-- <attachClasses>true</attachClasses>
+  <webXml>target/web.xml</webXml>
+  <webResources>
+  <resource>
+  <directory>src/main/webapp/WEB-INF</directory>
+  <filtering>true</filtering>
+  </resource>
+  </webResources> -->
+  </configuration>
+  </plugin>
+  <plugin>
+  <artifactId>maven-complier-plugin</artifactId>
+  <version>3.1</version>
+  <configuration>
+  <fork>true</fork>
+  <executable>/usr/lib/jvm/java-8-oracle/bin/javac.exe</executable>
+  </configuration>
+  </plugin>
   </plugins>
-    <finalName>ras</finalName>
   </build>
 </project>
